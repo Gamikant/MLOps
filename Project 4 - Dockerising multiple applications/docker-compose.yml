@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: ./database
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER:-rssuser}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-rsspassword}
+      POSTGRES_DB: ${DB_NAME:-rssfeeds}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-rssuser} -d ${DB_NAME:-rssfeeds}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  rss_reader:
+    build:
+      context: ./rss_reader
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      RSS_URL: ${RSS_URL:-https://www.thehindu.com/news/national/?service=rss}
+      POLL_INTERVAL: ${POLL_INTERVAL:-600}
+      DB_HOST: db
+      DB_PORT: 5432
+      POSTGRES_DB: ${DB_NAME:-rssfeeds}
+      POSTGRES_USER: ${DB_USER:-rssuser}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-rsspassword}
+      TITLE_PATH: ${TITLE_PATH:-title}
+      TIMESTAMP_PATH: ${TIMESTAMP_PATH:-published}
+      LINK_PATH: ${LINK_PATH:-link}
+      IMAGE_PATH: ${IMAGE_PATH:-media_content}
+      TAGS_PATH: ${TAGS_PATH:-tags}
+      SUMMARY_PATH: ${SUMMARY_PATH:-summary}
+    volumes:
+      - rss_images:/app/images
+
+  web_app:
+    build:
+      context: ./web_app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      POSTGRES_DB: ${DB_NAME:-rssfeeds}
+      POSTGRES_USER: ${DB_USER:-rssuser}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-rsspassword}
+    volumes:
+      - rss_images:/app/images  # Add this line to share the image volume
+
+
+volumes:
+  postgres_data:
+  rss_images:

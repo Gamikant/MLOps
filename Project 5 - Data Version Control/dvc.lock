@@ -1,0 +1,155 @@
+schema: '2.0'
+stages:
+  pull_data:
+    cmd: python pull_data.py
+    deps:
+    - path: dataset_partitions
+      hash: md5
+      md5: 895a8207e73952864c837c9b430d8fcd.dir
+      size: 135660241
+      nfiles: 60004
+    - path: pull_data.py
+      hash: md5
+      md5: 41fd7c3813341cd2cbfd4e46d0a8fc5e
+      size: 2030
+    params:
+      params.yaml:
+        dataset_version: v3
+        random_seed: 42
+    outs:
+    - path: data/images.npy
+      hash: md5
+      md5: a3bb1237e33ce17a84adeecf41a67404
+      size: 61440128
+    - path: data/labels.npy
+      hash: md5
+      md5: cbd3102d0fa448bafd2b66ce34db8a54
+      size: 80128
+  prepare_data:
+    cmd: python prepare_data.py
+    deps:
+    - path: data/images.npy
+      hash: md5
+      md5: a3bb1237e33ce17a84adeecf41a67404
+      size: 61440128
+    - path: data/labels.npy
+      hash: md5
+      md5: cbd3102d0fa448bafd2b66ce34db8a54
+      size: 80128
+    - path: prepare_data.py
+      hash: md5
+      md5: 5bee82553ec0bc98d2ff1a35c5a57d0b
+      size: 1949
+    params:
+      params.yaml:
+        data_split:
+          test_size: 0.15
+          train_size: 0.7
+          val_size: 0.15
+        random_seed: 42
+    outs:
+    - path: data/prepared/X_test.npy
+      hash: md5
+      md5: 2694970ea3569e5c0f25c1514c39470f
+      size: 36864128
+    - path: data/prepared/X_train.npy
+      hash: md5
+      md5: 656b02b51e5bb130507c2ba7646e7b83
+      size: 172032128
+    - path: data/prepared/X_val.npy
+      hash: md5
+      md5: 8ff5ae0ecf9ee970b2e91e9672743ef5
+      size: 36864128
+    - path: data/prepared/y_test.npy
+      hash: md5
+      md5: b359ed2e6f98153f94cacb9d2a0aac95
+      size: 12128
+    - path: data/prepared/y_train.npy
+      hash: md5
+      md5: c527899c15c6642a4fab37aa638a31c2
+      size: 56128
+    - path: data/prepared/y_val.npy
+      hash: md5
+      md5: 7db8bcc9efad6c1a663f10117e37626c
+      size: 12128
+  train_model:
+    cmd: python train_model.py
+    deps:
+    - path: data/prepared/X_train.npy
+      hash: md5
+      md5: 38a3c3d3a9a82d5ecc5f23bb7d87ca23
+      size: 172032128
+    - path: data/prepared/X_val.npy
+      hash: md5
+      md5: cd70343eef9c8261063c2c063a954536
+      size: 36864128
+    - path: data/prepared/y_train.npy
+      hash: md5
+      md5: 7dbf4b1f05538b23c931aadd961c6104
+      size: 56128
+    - path: data/prepared/y_val.npy
+      hash: md5
+      md5: 336fd1460eb7897bb9e0b0286d8a10bd
+      size: 12128
+    - path: train_model.py
+      hash: md5
+      md5: f226bbaaa5ca671177e6c73ffd81c3f4
+      size: 4489
+    params:
+      params.yaml:
+        model:
+          batch_size: 32
+          conv_filters:
+          - 32
+          - 64
+          - 128
+          conv_layers: 3
+          dropout_rate: 0.25
+          epochs: 10
+          kernel_sizes:
+          - 3
+          - 3
+          - 3
+          learning_rate: 0.001
+        random_seed: 42
+    outs:
+    - path: models/best_model.h5
+      hash: md5
+      md5: 12b0a75e8b11bafc56240b10089a3e7a
+      size: 13817400
+    - path: models/best_params.yaml
+      hash: md5
+      md5: 2b6f57fefb946f131d1bc9751b72c02f
+      size: 41
+  evaluate:
+    cmd: python evaluate_model.py
+    deps:
+    - path: data/prepared/X_test.npy
+      hash: md5
+      md5: 45880db28f4e421ffa91ffe91d7ea10b
+      size: 36864128
+    - path: data/prepared/y_test.npy
+      hash: md5
+      md5: cfb5732ded4af2ba9a3ed2ea20baca75
+      size: 12128
+    - path: evaluate_model.py
+      hash: md5
+      md5: be7d08eb5dfad1ca802a689abd5398f1
+      size: 3073
+    - path: models/best_model.h5
+      hash: md5
+      md5: 12b0a75e8b11bafc56240b10089a3e7a
+      size: 13817400
+    params:
+      params.yaml:
+        dataset_version: v2
+        random_seed: 42
+    outs:
+    - path: evaluation/classification_report_v2.txt
+      hash: md5
+      md5: 2feff4bc32f6b2296093dd6b09ff96c5
+      size: 799
+    - path: evaluation/confusion_matrix_v2.png
+      hash: md5
+      md5: d4a0d7f9b60e1e5e763c380db0d6e3bb
+      size: 59297

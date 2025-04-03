@@ -1,0 +1,61 @@
+stages:
+  pull_data:
+    cmd: python pull_data.py
+    deps:
+      - pull_data.py
+      - dataset_partitions
+    params:
+      - dataset_version
+      - random_seed
+    outs:
+      - data/images.npy
+      - data/labels.npy
+
+  prepare_data:
+    cmd: python prepare_data.py
+    deps:
+      - prepare_data.py
+      - data/images.npy
+      - data/labels.npy
+    params:
+      - random_seed
+      - data_split
+    outs:
+      - data/prepared/X_train.npy
+      - data/prepared/y_train.npy
+      - data/prepared/X_val.npy
+      - data/prepared/y_val.npy
+      - data/prepared/X_test.npy
+      - data/prepared/y_test.npy
+
+  train_model:
+    cmd: python train_model.py
+    deps:
+      - train_model.py
+      - data/prepared/X_train.npy
+      - data/prepared/y_train.npy
+      - data/prepared/X_val.npy
+      - data/prepared/y_val.npy
+    params:
+      - random_seed
+      - model
+    outs:
+      - models/best_model.h5
+      - models/best_params.yaml
+
+  evaluate:
+    cmd: python evaluate_model.py
+    deps:
+      - evaluate_model.py
+      - models/best_model.h5
+      - data/prepared/X_test.npy
+      - data/prepared/y_test.npy
+    params:
+      - random_seed
+      - dataset_version
+    metrics:
+      - evaluation/classification_report_${dataset_version}.txt:
+          cache: false
+    plots:
+      - evaluation/confusion_matrix_${dataset_version}.png:
+          cache: false

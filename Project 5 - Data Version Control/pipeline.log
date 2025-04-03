@@ -1,0 +1,321 @@
+
+2025-03-23 20:52:36,328 - train_model - INFO - Loading prepared data
+2025-03-23 20:52:36,450 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 20:52:36,451 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 20:53:27,299 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 20:54:19,929 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 20:55:12,517 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 20:56:06,120 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 20:57:00,380 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 20:57:53,548 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 20:58:47,075 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 20:59:40,512 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 21:00:34,720 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 21:00:34,770 - train_model - INFO - Best model saved successfully!
+2025-03-23 21:00:34,771 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.3, 'learning_rate': 0.001}, val_accuracy: 0.6467
+2025-03-23 21:00:41,584 - evaluate_model - INFO - Loading test data
+2025-03-23 21:00:41,620 - evaluate_model - INFO - Loading best model
+2025-03-23 21:00:41,745 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 21:00:41,752 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 21:00:42,325 - evaluate_model - INFO - Test accuracy: 0.6500
+2025-03-23 21:00:43,118 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 21:02:01,757 - train_model - INFO - Loading prepared data
+2025-03-23 21:02:01,995 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 21:02:01,995 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 21:03:41,071 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 21:05:22,234 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 21:07:02,236 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 21:08:42,644 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 21:10:22,314 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 21:12:02,271 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 21:13:42,747 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 21:15:21,695 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 21:17:01,231 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 21:17:01,305 - train_model - INFO - Best model saved successfully!
+2025-03-23 21:17:01,307 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.4, 'learning_rate': 0.001}, val_accuracy: 0.7100
+2025-03-23 21:17:07,987 - evaluate_model - INFO - Loading test data
+2025-03-23 21:17:08,040 - evaluate_model - INFO - Loading best model
+2025-03-23 21:17:08,159 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 21:17:08,163 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 21:17:08,930 - evaluate_model - INFO - Test accuracy: 0.6868
+2025-03-23 21:17:09,951 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 21:18:17,503 - train_model - INFO - Loading prepared data
+2025-03-23 21:18:17,825 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 21:18:17,825 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 21:20:40,253 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 21:23:10,242 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 21:25:39,443 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 21:28:08,935 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 21:30:37,698 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 21:33:09,095 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 21:35:40,342 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 21:38:09,653 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 21:40:38,099 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 21:40:38,173 - train_model - INFO - Best model saved successfully!
+2025-03-23 21:40:38,174 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.4, 'learning_rate': 0.001}, val_accuracy: 0.7382
+2025-03-23 21:40:45,388 - evaluate_model - INFO - Loading test data
+2025-03-23 21:40:45,451 - evaluate_model - INFO - Loading best model
+2025-03-23 21:40:45,559 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 21:40:45,563 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 21:40:46,643 - evaluate_model - INFO - Test accuracy: 0.7420
+2025-03-23 21:40:48,035 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 21:41:54,949 - train_model - INFO - Loading prepared data
+2025-03-23 21:41:55,076 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 21:41:55,076 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 21:42:43,087 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 21:43:32,161 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 21:44:21,163 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 21:45:12,305 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 21:46:03,327 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 21:46:54,716 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 21:47:45,393 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 21:48:36,697 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 21:49:29,417 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 21:49:29,479 - train_model - INFO - Best model saved successfully!
+2025-03-23 21:49:29,480 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.4, 'learning_rate': 0.001}, val_accuracy: 0.6417
+2025-03-23 21:49:35,993 - evaluate_model - INFO - Loading test data
+2025-03-23 21:49:36,025 - evaluate_model - INFO - Loading best model
+2025-03-23 21:49:36,133 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 21:49:36,137 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 21:49:36,618 - evaluate_model - INFO - Test accuracy: 0.6293
+2025-03-23 21:49:37,277 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 21:50:27,200 - pull_data - INFO - Pulling dataset version: v2
+2025-03-23 21:50:27,200 - pull_data - INFO - Processing version: v2
+2025-03-23 21:50:34,657 - pull_data - INFO - Dataset pulled successfully with 20000 images
+2025-03-23 21:50:48,702 - prepare_data - INFO - Loading dataset
+2025-03-23 21:50:48,859 - prepare_data - INFO - Splitting data with train=0.7, val=0.15, test=0.15
+2025-03-23 21:50:49,134 - prepare_data - INFO - Data prepared: train=14000, val=3000, test=3000
+2025-03-23 21:50:57,723 - train_model - INFO - Loading prepared data
+2025-03-23 21:50:57,847 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 21:50:57,848 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 21:51:45,171 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 21:52:33,836 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 21:53:21,216 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 21:54:09,198 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 21:54:59,826 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 21:55:52,586 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 21:56:42,936 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 21:57:33,094 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 21:58:22,707 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 21:58:22,765 - train_model - INFO - Best model saved successfully!
+2025-03-23 21:58:22,768 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.4, 'learning_rate': 0.001}, val_accuracy: 0.6623
+2025-03-23 21:58:28,939 - evaluate_model - INFO - Loading test data
+2025-03-23 21:58:28,971 - evaluate_model - INFO - Loading best model
+2025-03-23 21:58:29,073 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 21:58:29,077 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 21:58:29,561 - evaluate_model - INFO - Test accuracy: 0.6493
+2025-03-23 21:58:30,251 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 21:59:16,570 - pull_data - INFO - Pulling dataset version: v3
+2025-03-23 21:59:16,570 - pull_data - INFO - Processing version: v3
+2025-03-23 21:59:23,774 - pull_data - INFO - Dataset pulled successfully with 20000 images
+2025-03-23 21:59:34,842 - prepare_data - INFO - Loading dataset
+2025-03-23 21:59:35,010 - prepare_data - INFO - Splitting data with train=0.7, val=0.15, test=0.15
+2025-03-23 21:59:35,295 - prepare_data - INFO - Data prepared: train=14000, val=3000, test=3000
+2025-03-23 21:59:43,931 - train_model - INFO - Loading prepared data
+2025-03-23 21:59:44,042 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 21:59:44,042 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 22:00:31,237 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 22:01:20,363 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 22:02:08,386 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 22:03:00,162 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 22:03:51,415 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 22:04:41,777 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 22:05:32,828 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 22:06:23,511 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 22:07:13,350 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 22:07:13,417 - train_model - INFO - Best model saved successfully!
+2025-03-23 22:07:13,418 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.2, 'learning_rate': 0.001}, val_accuracy: 0.6527
+2025-03-23 22:07:20,284 - evaluate_model - INFO - Loading test data
+2025-03-23 22:07:20,315 - evaluate_model - INFO - Loading best model
+2025-03-23 22:07:20,423 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 22:07:20,427 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 22:07:20,910 - evaluate_model - INFO - Test accuracy: 0.6137
+2025-03-23 22:07:21,538 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 22:08:03,470 - pull_data - INFO - Pulling dataset version: v1+v2
+2025-03-23 22:08:03,470 - pull_data - INFO - Processing version: v1
+2025-03-23 22:08:11,008 - pull_data - INFO - Processing version: v2
+2025-03-23 22:08:15,507 - pull_data - INFO - Dataset pulled successfully with 40000 images
+2025-03-23 22:08:26,319 - prepare_data - INFO - Loading dataset
+2025-03-23 22:08:26,717 - prepare_data - INFO - Splitting data with train=0.7, val=0.15, test=0.15
+2025-03-23 22:08:27,309 - prepare_data - INFO - Data prepared: train=28000, val=6000, test=6000
+2025-03-23 22:08:36,073 - train_model - INFO - Loading prepared data
+2025-03-23 22:08:36,270 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 22:08:36,271 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 22:10:10,683 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 22:11:48,903 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 22:13:25,960 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 22:15:05,040 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 22:16:44,039 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 22:18:20,916 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 22:20:01,384 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 22:21:39,926 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 22:23:18,917 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 22:23:18,991 - train_model - INFO - Best model saved successfully!
+2025-03-23 22:23:18,993 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.4, 'learning_rate': 0.001}, val_accuracy: 0.7133
+2025-03-23 22:23:25,526 - evaluate_model - INFO - Loading test data
+2025-03-23 22:23:25,574 - evaluate_model - INFO - Loading best model
+2025-03-23 22:23:25,679 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 22:23:25,683 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 22:23:26,393 - evaluate_model - INFO - Test accuracy: 0.6788
+2025-03-23 22:23:27,338 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 22:24:07,134 - pull_data - INFO - Pulling dataset version: v1+v2+v3
+2025-03-23 22:24:07,134 - pull_data - INFO - Processing version: v1
+2025-03-23 22:24:10,570 - pull_data - INFO - Processing version: v2
+2025-03-23 22:24:13,956 - pull_data - INFO - Processing version: v3
+2025-03-23 22:24:18,291 - pull_data - INFO - Dataset pulled successfully with 60000 images
+2025-03-23 22:24:28,435 - prepare_data - INFO - Loading dataset
+2025-03-23 22:24:28,965 - prepare_data - INFO - Splitting data with train=0.7, val=0.15, test=0.15
+2025-03-23 22:24:29,900 - prepare_data - INFO - Data prepared: train=42000, val=9000, test=9000
+2025-03-23 22:24:39,268 - train_model - INFO - Loading prepared data
+2025-03-23 22:24:39,562 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 22:24:39,562 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 22:27:01,079 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 22:29:31,050 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 22:31:59,057 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 22:34:27,194 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 22:36:55,147 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 22:39:29,051 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 22:42:01,246 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 22:44:29,465 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 22:46:55,595 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 22:46:55,665 - train_model - INFO - Best model saved successfully!
+2025-03-23 22:46:55,666 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.2, 'learning_rate': 0.001}, val_accuracy: 0.7277
+2025-03-23 22:47:02,549 - evaluate_model - INFO - Loading test data
+2025-03-23 22:47:02,610 - evaluate_model - INFO - Loading best model
+2025-03-23 22:47:02,714 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 22:47:02,718 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 22:47:03,680 - evaluate_model - INFO - Test accuracy: 0.7216
+2025-03-23 22:47:05,396 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 22:47:57,570 - pull_data - INFO - Pulling dataset version: v1
+2025-03-23 22:47:57,570 - pull_data - INFO - Processing version: v1
+2025-03-23 22:48:00,843 - pull_data - INFO - Dataset pulled successfully with 20000 images
+2025-03-23 22:48:12,171 - prepare_data - INFO - Loading dataset
+2025-03-23 22:48:12,331 - prepare_data - INFO - Splitting data with train=0.7, val=0.15, test=0.15
+2025-03-23 22:48:12,607 - prepare_data - INFO - Data prepared: train=14000, val=3000, test=3000
+2025-03-23 22:48:21,071 - train_model - INFO - Loading prepared data
+2025-03-23 22:48:21,187 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 22:48:21,188 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 22:49:09,398 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 22:49:58,694 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 22:50:47,193 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 22:51:37,432 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 22:52:28,488 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 22:53:21,873 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 22:54:14,306 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 22:55:06,097 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 22:55:56,694 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 22:55:56,764 - train_model - INFO - Best model saved successfully!
+2025-03-23 22:55:56,765 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.4, 'learning_rate': 0.001}, val_accuracy: 0.6570
+2025-03-23 22:56:02,996 - evaluate_model - INFO - Loading test data
+2025-03-23 22:56:03,037 - evaluate_model - INFO - Loading best model
+2025-03-23 22:56:03,151 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 22:56:03,155 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 22:56:03,639 - evaluate_model - INFO - Test accuracy: 0.6433
+2025-03-23 22:56:04,278 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 22:56:46,142 - pull_data - INFO - Pulling dataset version: v2
+2025-03-23 22:56:46,143 - pull_data - INFO - Processing version: v2
+2025-03-23 22:56:50,201 - pull_data - INFO - Dataset pulled successfully with 20000 images
+2025-03-23 22:57:01,967 - prepare_data - INFO - Loading dataset
+2025-03-23 22:57:02,131 - prepare_data - INFO - Splitting data with train=0.7, val=0.15, test=0.15
+2025-03-23 22:57:02,416 - prepare_data - INFO - Data prepared: train=14000, val=3000, test=3000
+2025-03-23 22:57:10,797 - train_model - INFO - Loading prepared data
+2025-03-23 22:57:10,918 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 22:57:10,918 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 22:58:00,647 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 22:58:50,451 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 22:59:40,035 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 23:00:31,355 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 23:01:23,148 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 23:02:16,259 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 23:03:07,376 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 23:03:58,574 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 23:04:49,175 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 23:04:49,238 - train_model - INFO - Best model saved successfully!
+2025-03-23 23:04:49,240 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.4, 'learning_rate': 0.001}, val_accuracy: 0.6310
+2025-03-23 23:04:55,929 - evaluate_model - INFO - Loading test data
+2025-03-23 23:04:55,961 - evaluate_model - INFO - Loading best model
+2025-03-23 23:04:56,066 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 23:04:56,070 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 23:04:56,562 - evaluate_model - INFO - Test accuracy: 0.6477
+2025-03-23 23:04:57,209 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 23:05:41,018 - pull_data - INFO - Pulling dataset version: v3
+2025-03-23 23:05:41,018 - pull_data - INFO - Processing version: v3
+2025-03-23 23:05:47,892 - pull_data - INFO - Dataset pulled successfully with 20000 images
+2025-03-23 23:05:58,008 - prepare_data - INFO - Loading dataset
+2025-03-23 23:05:58,180 - prepare_data - INFO - Splitting data with train=0.7, val=0.15, test=0.15
+2025-03-23 23:05:58,484 - prepare_data - INFO - Data prepared: train=14000, val=3000, test=3000
+2025-03-23 23:06:06,259 - train_model - INFO - Loading prepared data
+2025-03-23 23:06:06,370 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 23:06:06,370 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 23:06:54,748 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 23:07:42,974 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 23:08:31,194 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 23:09:21,750 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 23:10:13,739 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 23:11:05,859 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 23:11:57,066 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 23:12:47,445 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 23:13:36,919 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 23:13:36,979 - train_model - INFO - Best model saved successfully!
+2025-03-23 23:13:36,981 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.3, 'learning_rate': 0.001}, val_accuracy: 0.6610
+2025-03-23 23:13:44,626 - evaluate_model - INFO - Loading test data
+2025-03-23 23:13:44,661 - evaluate_model - INFO - Loading best model
+2025-03-23 23:13:44,772 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 23:13:44,777 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 23:13:45,377 - evaluate_model - INFO - Test accuracy: 0.6750
+2025-03-23 23:13:46,168 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 23:14:26,847 - pull_data - INFO - Pulling dataset version: v1+v2
+2025-03-23 23:14:26,848 - pull_data - INFO - Processing version: v1
+2025-03-23 23:14:30,440 - pull_data - INFO - Processing version: v2
+2025-03-23 23:14:33,864 - pull_data - INFO - Dataset pulled successfully with 40000 images
+2025-03-23 23:14:46,261 - prepare_data - INFO - Loading dataset
+2025-03-23 23:14:46,669 - prepare_data - INFO - Splitting data with train=0.7, val=0.15, test=0.15
+2025-03-23 23:14:47,256 - prepare_data - INFO - Data prepared: train=28000, val=6000, test=6000
+2025-03-23 23:14:55,954 - train_model - INFO - Loading prepared data
+2025-03-23 23:14:56,140 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 23:14:56,140 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 23:16:29,745 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 23:18:06,102 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 23:19:43,061 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 23:21:20,437 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 23:22:58,504 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 23:24:37,314 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 23:26:16,121 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 23:27:53,187 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 23:29:29,449 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 23:29:29,518 - train_model - INFO - Best model saved successfully!
+2025-03-23 23:29:29,520 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.4, 'learning_rate': 0.001}, val_accuracy: 0.7062
+2025-03-23 23:29:36,057 - evaluate_model - INFO - Loading test data
+2025-03-23 23:29:36,109 - evaluate_model - INFO - Loading best model
+2025-03-23 23:29:36,218 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 23:29:36,222 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 23:29:36,932 - evaluate_model - INFO - Test accuracy: 0.7003
+2025-03-23 23:29:37,916 - evaluate_model - INFO - Evaluation completed and results saved
+2025-03-23 23:30:20,676 - pull_data - INFO - Pulling dataset version: v1+v2+v3
+2025-03-23 23:30:20,676 - pull_data - INFO - Processing version: v1
+2025-03-23 23:30:23,867 - pull_data - INFO - Processing version: v2
+2025-03-23 23:30:27,128 - pull_data - INFO - Processing version: v3
+2025-03-23 23:30:30,793 - pull_data - INFO - Dataset pulled successfully with 60000 images
+2025-03-23 23:30:42,326 - prepare_data - INFO - Loading dataset
+2025-03-23 23:30:42,871 - prepare_data - INFO - Splitting data with train=0.7, val=0.15, test=0.15
+2025-03-23 23:30:43,838 - prepare_data - INFO - Data prepared: train=42000, val=9000, test=9000
+2025-03-23 23:30:53,794 - train_model - INFO - Loading prepared data
+2025-03-23 23:30:54,060 - train_model - INFO - Starting hyperparameter tuning
+2025-03-23 23:30:54,061 - train_model - INFO - Training with lr=0.0001, dropout=0.2
+2025-03-23 23:33:14,583 - train_model - INFO - Training with lr=0.001, dropout=0.2
+2025-03-23 23:35:43,718 - train_model - INFO - Training with lr=0.01, dropout=0.2
+2025-03-23 23:38:15,701 - train_model - INFO - Training with lr=0.0001, dropout=0.3
+2025-03-23 23:41:06,157 - train_model - INFO - Training with lr=0.001, dropout=0.3
+2025-03-23 23:43:59,790 - train_model - INFO - Training with lr=0.01, dropout=0.3
+2025-03-23 23:46:53,311 - train_model - INFO - Training with lr=0.0001, dropout=0.4
+2025-03-23 23:49:45,722 - train_model - INFO - Training with lr=0.001, dropout=0.4
+2025-03-23 23:52:34,291 - train_model - INFO - Training with lr=0.01, dropout=0.4
+2025-03-23 23:55:20,911 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-03-23 23:55:20,987 - train_model - INFO - Best model saved successfully!
+2025-03-23 23:55:20,989 - train_model - INFO - Best model saved with params: {'dropout_rate': 0.4, 'learning_rate': 0.001}, val_accuracy: 0.7323
+2025-03-23 23:55:28,102 - evaluate_model - INFO - Loading test data
+2025-03-23 23:55:28,162 - evaluate_model - INFO - Loading best model
+2025-03-23 23:55:28,269 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-03-23 23:55:28,273 - evaluate_model - INFO - Evaluating model on test data
+2025-03-23 23:55:29,380 - evaluate_model - INFO - Test accuracy: 0.7077
+2025-03-23 23:55:31,153 - evaluate_model - INFO - Evaluation completed and results saved

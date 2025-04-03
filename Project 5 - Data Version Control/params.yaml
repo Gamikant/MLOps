@@ -1,0 +1,20 @@
+data_split:
+  test_size: 0.15
+  train_size: 0.7
+  val_size: 0.15
+dataset_version: v1+v2+v3
+model:
+  batch_size: 32
+  conv_filters:
+  - 32
+  - 64
+  - 128
+  conv_layers: 3
+  dropout_rate: 0.25
+  epochs: 10
+  kernel_sizes:
+  - 3
+  - 3
+  - 3
+  learning_rate: 0.001
+random_seed: 456

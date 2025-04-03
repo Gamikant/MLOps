@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS News Reader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .date-filter {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .article {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .article h2 {
+            margin-top: 0;
+        }
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .article-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .tags {
+            margin-top: 10px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #eee;
+            padding: 3px 8px;
+            margin-right: 5px;
+            border-radius: 3px;
+            font-size: 0.8em;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RSS News Reader</h1>
+        </header>
+        
+        <div class="date-filter">
+            <form action="/" method="get">
+                <label for="date">Filter by date:</label>
+                <input type="date" id="date" name="date" value="{{ date_filter }}">
+                <button type="submit">Filter</button>
+            </form>
+        </div>
+        
+        {% if articles %}
+            {% for article in articles %}
+            <div class="article">
+                <h2><a href="{{ article.weblink }}" target="_blank">{{ article.title }}</a></h2>
+                <div class="article-meta">
+                    Published: {{ article.publication_timestamp.strftime('%Y-%m-%d %H:%M') }}
+                </div>
+                
+                {% if article.image_path %}
+                <img src="{{ article.image_path }}" alt="{{ article.title }}" class="article-image">
+                {% endif %}
+                
+                {% if article.summary %}
+                <div class="article-summary">
+                    {{ article.summary }}
+                </div>
+                {% endif %}
+                
+                {% if article.tags %}
+                <div class="tags">
+                    {% for tag in article.tags %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-articles">
+                <p>No articles found for the selected date.</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
